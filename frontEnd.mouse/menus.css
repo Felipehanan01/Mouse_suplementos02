@@ -1,0 +1,48 @@
+
+
+/* Estilo para o menu principal */
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 85px;
+}
+  
+#menu > li {
+    position: relative;             /* Necessário para posicionar o submenu */
+    padding: 8px 16px;
+    cursor: pointer;
+}
+  
+  /* Estilo para o submenu */
+.submenu {
+    display: none;                  /* Esconde o submenu por padrão */
+    position: absolute;             /* Posiciona o submenu */
+    top: 100%;                      /* Alinha abaixo do item principal */
+    left: 0;
+    list-style: none;
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.submenu li {
+    padding: 8px 10px;
+    white-space: nowrap;            /* Evita quebra de linha nos itens */
+  }
+  
+  /* Exibe o submenu ao passar o mouse sobre o item principal */
+#menu > li:hover .submenu {
+    display: block;
+  }
+  
+  /* Estilo adicional para o submenu ao passar o mouse */
+.submenu li:hover {
+    background-color: #ddd;
+}
+.categoria_texto {
+    font-weight: bold;          /* Torna o texto em negrito */
+    font-size: 18px;            /* Aumenta o tamanho da fonte */
+}
+
+  
