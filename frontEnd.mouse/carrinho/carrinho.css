@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #ebe4e4;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #000020;
+    color: white;
+    padding: 5px 20px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    flex-grow: 1;
+}
+
+/* Logo */
+.logo-container {
+    background-color: #000020;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+/* Contato */
+.contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin-right: 50px;
+}
+
+.telefone {
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-right: 10px; /* Adiciona distância entre o ícone e o texto */
+}
+.bold-link {
+
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: left;
+    display: inline-block; /* Garante que o texto fique ao lado do ícone */
+}
+
+.carrinho-titulo {
+    font-family: 'Roboto', sans-serif; /* Escolha uma fonte mais moderna */
+    font-size: 3rem; /* Ajuste o tamanho da fonte */
+    color: #919191; /* Cor cinza/branco */
+    text-align: center; /* Centraliza horizontalmente */
+    margin-top: 20px; /* Ajusta o espaçamento superior */
+    text-transform: uppercase; /* Deixa o texto em letras maiúsculas */
+}
+
+.Return {
+    width: 80px; /* Aumenta a largura */
+    height: 80px; /* Aumenta a altura */
+    padding: 0; /* Remove o preenchimento interno */
+    cursor: pointer; /* Mostra o cursor de botão */
+    font-size: 3rem; /* Aumenta o tamanho do ícone */
+    display: flex; /* Garante centralização */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.Return button {
+    all: unset; /* Remove todas as bordas, margens e preenchimentos padrão do botão */
+    width: 100%; /* Faz o botão ocupar todo o espaço disponível no contêiner */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

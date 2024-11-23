@@ -10,20 +10,122 @@ html, body {
     background-color: #ebe4e4;
 }
 
+/* Barra de navegação */
 .navbar {
     display: flex;
     align-items: center;
     background-color: #000020;
     color: white;
     padding: 5px 20px;
+    position: relative;
+    z-index: 999; /* Garante que a barra de navegação esteja acima do banner */
 }
 
+/* Lista de categorias */
 .nav-list {
     display: flex;
     align-items: center;
     list-style: none;
     flex-grow: 1;
+    position: relative; /* Necessário para garantir o funcionamento do submenu */
 }
+
+/* Estilo para o menu de categorias */
+.nav-list li {
+    position: relative;
+    z-index: 10;  /* Certifica-se de que os itens estão acima do banner */
+}
+
+/* Menu "TODAS AS CATEGORIAS" */
+#geral {
+    position: relative;
+}
+
+#geral .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;  /* Fica logo abaixo do item de menu */
+    left: 0;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 20; /* Garantir que o submenu fique acima de outros elementos */
+}
+
+#geral:hover .submenu {
+    display: block; /* Torna o submenu visível ao passar o mouse */
+}
+
+/* Estilo para o submenu */
+.submenu li {
+    padding: 10px 20px;
+    list-style: none;
+}
+
+.submenu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+/* Efeito de hover no submenu */
+.submenu li a:hover {
+    background-color: #555;
+}
+
+#novos:hover .submenu {
+    display: block; /* Torna o submenu visível ao passar o mouse */
+}
+
+/* Menu "ROUPAS" */
+#acessorios .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 20;
+}
+
+#acessorios:hover .submenu {
+    display: block; /* Torna o submenu visível ao passar o mouse */
+}
+
+/* Menu "QUEIMA DE ESTOQUE" */
+#novos .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 20;
+}
+
+/* Estilo para o menu suspenso */
+.nav-list li:hover .submenu {
+    display: block; /* Torna o menu suspenso visível quando o item for hover */
+    position: absolute;
+    top: 100%; /* Aparece abaixo do item da lista */
+    left: 0;
+    background-color: #333;
+    padding: 10px 0;
+    list-style: none;
+    z-index: 1000; /* Garante que o menu suspenso fique acima de tudo */
+}
+
+/* Estilo para itens do menu suspenso */
+.submenu li {
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hover para itens do menu suspenso */
+.submenu li:hover {
+    background-color: #555;
+}
+
 
 /* Logo */
 .logo-container {
@@ -129,5 +231,265 @@ html, body {
     cursor: pointer;
 }
 
+/* Estilo para o banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-top: 80px;
+    overflow: hidden;
+    z-index: 1; /* Garante que o banner fique abaixo da navegação e lista de categorias */
+}
 
+/* Adicionando o efeito de escurecimento do banner */
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajustando a opacidade do fundo */
+    z-index: 1;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 39%;
+}
+
+/* Estilo para o texto do banner */
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; /* Coloca o texto acima do pseudo-elemento escuro e abaixo da navegação */
+    text-align: center;
+    color: #28a745; /* Cor verde do texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8),
+                 0 0 15px rgba(0, 255, 0, 0.6),
+                 0 0 30px rgba(0, 255, 0, 0.4); /* Efeito de brilho em verde */
+}       
+
+/* Estilo para o título e o subtítulo */
+.banner-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #21ff03; /* Cor mais quente (laranja-dourado), que combina com verde */
+    font-weight: bold; /* Aumenta a espessura do texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Contorno preto */
+    transition: color 0.5s ease, transform 0.3s ease; /* Suaviza a cor e o zoom */
+}
+
+.banner-text p {
+    font-size: 1.2em;
+    margin: 0;
+    color: #15ff00; /* Cor amarela suave que complementa o verde */
+    font-weight: 600; /* Aumenta a espessura do texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Contorno preto */
+    transition: color 0.5s ease, transform 0.3s ease; /* Suaviza a cor e o zoom */
+}
+
+/* Efeito de hover no título e subtítulo */
+.banner-text h1:hover, .banner-text p:hover {
+    color: #ffffff; /* Cor branca ao passar o mouse */
+    transform: scale(1.05); /* Aumento suave do texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), /* Contorno preto */
+                 0 0 20px rgba(0, 255, 0, 0.8),  /* Aumenta o brilho em verde */
+                 0 0 40px rgba(0, 255, 0, 0.6); /* Aumenta o brilho ainda mais */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+
+:root {
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+}
+
+.final {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+main {
+    height: 80vh;
+}
+
+footer {
+    width: 100%;
+    color: var(--color-neutral-40);
+}
+
+.footer-link {
+    text-decoration: none;
+}
+footer {
+    background-color:var(--color-neutral-10); /* Define o fundo preto para todo o rodapé */
+    color: #fff; /* Ajusta a cor do texto para branco para maior contraste */
+}
+#footer_content {
+    background-color: var(--color-neutral-10);
+    display: flex; /* Define um layout flexível */
+    flex-wrap: wrap; /* Permite quebrar linha quando necessário */
+    justify-content: space-between; /* Espaça os itens uniformemente */
+    align-items: flex-start; /* Alinha os itens pelo topo */
+    padding: 2rem; /* Reduz a altura do padding para ganhar espaço */
+    gap: 1.5rem; /* Espaçamento entre as seções */
+}
+
+#footer_contacts, 
+.footer-list, 
+#footer_subscribe {
+    flex: 1; /* Cada seção ocupa espaço proporcional */
+    min-width: 200px; /* Garante que caibam em uma linha */
+}
+
+#footer_social_media {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones */
+    gap: 1rem; /* Espaçamento entre os ícones */
+    margin-top: 1rem; /* Adiciona espaçamento superior */
+    width: 100%; /* Faz com que os ícones ocupem a linha inteira */
+}
+
+#footer_social_media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem; /* Ajusta o tamanho dos ícones */
+    width: 2rem; /* Ajusta o tamanho dos ícones */
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+
+
+#footer_contacts h1 {
+    margin-bottom: 0.75rem;
+}
+
+#footer_social_media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+#footer_social_media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer_social_media .footer-link i {
+    font-size: 1.25rem;
+}
+
+#footer_social_media .footer-link:hover {
+    opacity: 0.8;
+}
+
+#instagram {
+    background: linear-gradient(45deg, #7f37c9, #ff2992, #ff9807);
+}
+
+#facebook {
+    background-color: #4267b3;
+}
+
+#whatsapp {
+    background-color: #25d366;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.98rem;
+    list-style: none;
+}
+
+.footer-list .footer-link {
+    color: var(--color-neutral-30);
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+    color: #25d366;
+}
+
+#footer_subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#footer_subscribe p {
+    color: var(--color-neutral-30);
+}
+
+#input_group {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-neutral-0);
+    border-radius: 4px;
+}
+
+#input_group input {
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+#input_group button {
+    background-color: #7f37c9;
+    border: none;
+    color: var(--color-neutral-40);
+    padding: 0px 1.25rem;
+    font-size: 1.125rem;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#input_group button:hover {
+    opacity: 0.8;
+}
+
+#footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-neutral-0);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+    #footer_content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #footer_content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
+}
 

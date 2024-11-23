@@ -10,58 +10,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-    <!--cabeçalho de navegação-->
-
+    <!-- Cabeçalho de navegação -->
     <div class="navbar">
         <nav>
             <ul class="nav-list">
-                <!-- Logo da marca -->
                 <li>
                     <div class="logo-container">
                         <img src="images/logo.jpeg" alt="Mouse Suplementos" class="logo">
                     </div>
                 </li>
-
-                <!-- Campo de pesquisa -->
                 <li>
                     <div class="search-container">
                         <input type="search" class="search-input" placeholder="Encontre o suplemento ideal para você" aria-label="Campo de pesquisa">
-                        <i class="fas fa-search search-icon"></i> <!-- Ícone da lupa -->
+                        <i class="fas fa-search search-icon"></i>
                     </div>
                 </li>
-                
-
-                <!-- Contato -->
-                 <li class="telefone">
+                <li class="telefone">
                     <i class="fas fa-phone"></i>
-                 </li>
+                </li>
                 <li class="contato">
                     <a href="link-desejado.html" class="bold-link">Fale conosco<br><strong>Clique aqui</strong></a>
                 </li>
-
-                <!-- Formulário de Contato -->
                 <li class="contact-info">
                     <input type="text" class="contact-input" placeholder="Nome">
                     <input type="text" class="contact-input" placeholder="WhatsApp">
                     <input type="email" class="contact-input email-input" placeholder="Digite aqui seu email">
                     <button type="button" class="contact-button">Enviar</button>
                 </li>
-
-                <!-- Carrinho de Compras -->
                 <li>
-                    <i class="fas fa-shopping-cart cart-icon"></i>
+                    <a href="carrinho/carrinho.html">
+                        <i class="fas fa-shopping-cart cart-icon"></i>
+                    </a>
                 </li>
             </ul>
         </nav>
     </div>
 
-        <!--lugar onde vai ficar os menus -->
-    <div > 
-
+    <!-- Menu principal -->
+    <div>
         <header>
             <ul id="menu">
-                
                 <li id="geral">
                     <span class="categoria_texto">
                         <i class="fa-sharp fa-solid fa-bars-staggered"></i>
@@ -69,54 +57,119 @@
                         <i class="fa-solid fa-angle-down"></i>
                     </span>
                     <ul class="submenu">
-
-                        <!--LINK DA PAGINA DE VENDAS DO WHEY-->
-                        <li class="CREATINA"> <a href="whey/whey.html">WHEY PROTEIN</a>
-                        </li>
-
-
-                        <!--LINK DA PAGINA DE VENDAS DA CREATINA-->
+                        <li class="CREATINA"><a href="whey/whey.html">WHEY PROTEIN</a></li>
                         <li class="CREATINA"><a href="Creatina/Creatina.html">CREATINA</a></li>
-
-                        <!--LINK DA PAGINA DE VENDAS DE PRE-TREINO-->
                         <li class="PRE-TREINO"><a href="Pre-treino/Pre_treino.html">PRE-TREINO</a></li>
                     </ul>
                 </li>
-
-
-
                 <li id="novos">QUEIMA DE ESTOQUE
-                  <ul class="submenu">
-                    <li class="QUEIMA_ESTOQUE"><a href="QUEIMA_ESTOQUE/Queima_estoque.html">PRODUTOS</a></li>
-
-                  </ul>
+                    <ul class="submenu">
+                        <li class="QUEIMA_ESTOQUE"><a href="QUEIMA_ESTOQUE/Queima_estoque.html">PRODUTOS</a></li>
+                    </ul>
                 </li>
-
-
                 <li id="acessorios">ROUPAS
                     <ul class="submenu">
                         <li class="ROUPAS"><a href="Roupas/Masculina/masculinas.html">MASCULINAS</a></li>
-                        <li class="ROUPAS"><a href="Roupas/Feminina/">FEMININAS</a></li>
+                        <li class="ROUPAS"><a href="Roupas/Feminina/femininas.html">FEMININAS</a></li>
                     </ul>
                 </li>
-                <!-- Adicione mais itens do menu aqui -->
-              </ul>
-              
-        
+            </ul>
         </header>
-
     </div>
 
-    <!--Lugar onde vai ficar o carroscel da pagina e os produtos-->
-    <div class="carrosel">CARROSCEL</div>
+    <!-- Banner principal -->
+    <div class="banner">
+        <img src="Banner Index.webp" alt="Banner principal" class="banner-img">
+        <div class="banner-text">
+            <h1>Seja Mais Forte com Mouse Suplementos</h1>
+            <p>Os melhores produtos para sua saúde e desempenho</p>
+        </div>        
+    </div>
 
+    <!-- Seções alternadas de informações -->
+    <div class="info-section">
+        <div class="info-container">
+            <div class="info-image">
+                <img src="whey index.png"  alt="Whey Protein">
+            </div>
+            <div class="info-text">
+                <h2>Whey Protein de Alta Qualidade</h2>
+                <p>Conquiste seus objetivos com proteínas premium que apoiam seu desempenho físico.</p>
+            </div>
+        </div>
 
-    <!--Lugar onde vai ficar as informações finais-->
+        <div class="info-container reverse">
+            <div class="info-image">
+                <img src="creatina index.webp" alt="Creatina">
+            </div>
+            <div class="info-text">
+                <h2>Creatina para Força e Explosão</h2>
+                <p>Aumente sua força muscular com creatina de alta pureza e performance.</p>
+            </div>
+        </div>
+
+        <div class="info-container">
+            <div class="info-image">
+                <img src="pré treino.webp" alt="Pré-Treino">
+            </div>
+            <div class="info-text">
+                <h2>Pré-Treinos Potentes</h2>
+                <p>Energia e foco garantidos para superar qualquer treino!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
     <div class="final">
-        <footer>
-
+        <footer>        
+            <div id="footer_content">
+                <div id="footer_contacts">
+                    <h1>Sobre Nós</h1>
+                    <p>Na Mouse Suplementos, tornamos sua compra fácil e eficiente. Aqui, você encontra suplementos de qualidade com rapidez e praticidade.</p>
+                </div>
+            
+                <ul class="footer-list">
+                    <li><h3>Início</h3></li>
+                    <li><a href="#" class="footer-link">Voltar ao topo</a></li>
+                    <li><a href="#" class="footer-link">Suporte</a></li>
+                    <li><a href="#" class="footer-link">Atendimento Online</a></li>
+                </ul>
+            
+                <ul class="footer-list">
+                    <li><h3>Informações</h3></li>
+                    <li><a href="mailto:mousesuplementos@gmail.com" class="footer-link">Fale Conosco</a></li>
+                    <li><a href="#" class="footer-link">Desenvolvedores</a></li>
+                    <li><a href="https://drive.google.com/file/d/1WsfLzxy2RZbfXLWYNqAjKkbes5LdyE31/view" class="footer-link">Portfólio</a></li>
+                </ul>
+            
+                <div id="footer_subscribe">
+                    <h3>Inscrever-se</h3>
+                    <p>Informe seu email para ficar por dentro de nossas ofertas, novidades e soluções para sua saúde.</p>
+                    <div id="input_group">
+                        <input type="email" id="email" placeholder="Digite seu email">
+                        <button><i class="fa-regular fa-envelope"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="footer_social_media">
+                <a href="https://www.instagram.com/mousesuplementos" class="footer-link" id="instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="footer-link" id="facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=5562994262133" class="footer-link" id="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+            
+       
+            <div id="footer_copyright">
+                &copy;
+                2024 Todos os direitos reservados
+            </div>
         </footer>
     </div>
 </body>
 </html>
-

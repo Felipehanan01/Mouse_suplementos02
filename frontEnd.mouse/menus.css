@@ -52,4 +52,75 @@ a {
   text-decoration: none;
 }
 
+/* Seções de informações */
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Imagem na seção de informações */
+.info-image img {
+  width: 80%; /* Ajusta a largura das imagens para 80% da largura do contêiner */
+  max-width: 300px; /* Define um tamanho máximo para as imagens */
+  height: auto; /* Mantém a proporção da imagem */
+  transition: transform 0.3s ease; /* Suaviza o efeito de transformação (se houver algum efeito de hover) */
+}
+
+/* Imagens na seção invertida */
+.info-container.reverse .info-image img {
+  width: 80%; /* Ajusta a largura das imagens para 80% da largura do contêiner */
+  max-width: 350px; /* Define um tamanho máximo para as imagens */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Imagem específica para o Whey Protein */
+.info-container:first-child .info-image img {
+  width: 75%; /* Define uma largura menor para a imagem do Whey */
+  max-width: 500px; /* Define um tamanho máximo ainda menor para a imagem do Whey */
+}
+
+/* Imagem específica para o Pré-Treino */
+.info-container:nth-child(3) .info-image img {
+  width: 83%; /* Define uma largura menor para a imagem do Pré-Treino */
+  max-width: 300px; /* Define um tamanho máximo para a imagem do Pré-Treino */
+}
+
+/* Contêiner de informações */
+.info-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.info-container.reverse {
+  flex-direction: row-reverse;
+}
+
+.info-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.info-text {
+  flex: 1;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leve sombra */
+}
+
+/* Títulos e textos das seções de informações */
+.info-text h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.info-text p {
+  font-size: 1.1em;
+}
+
+
   

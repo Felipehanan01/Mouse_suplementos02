@@ -133,12 +133,23 @@ main {
     padding: 25px; /* Adiciona um espaço interno */
 
 }
-  .img-full {
-    width: 800px; /* Define que a imagem ocupará toda a largura do contêiner */
-    height: 400px; /* Define uma altura fixa para a imagem */
+.img-full {
+    width: 100%; /* Faz o banner ocupar toda a largura da tela */
+    height: auto; /* Mantém a proporção da imagem */
     display: block; /* Remove o espaço extra ao redor da imagem */
-    object-fit: cover; /* Ajusta a imagem para preencher o espaço sem distorção */
+    object-fit: cover; /* Garante que a imagem preencha o espaço disponível */
+    margin: 20px auto; /* Centraliza o banner com margens */
 }
+
+
+.img-full img {
+    width: 100%; /* O banner ocupa 100% da largura */
+    height: 450px; /* Altura fixa */
+    object-fit: cover; /* Garante preenchimento sem distorção */
+    display: block; /* Remove espaços ao redor */
+}
+
+
 
 /* Cards */
 .card-container {
