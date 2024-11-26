@@ -134,7 +134,35 @@ main {
     margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
     padding: 25px; /* Adiciona um espaço interno */
 }
+.img-full {
+    width: 100%; /* Faz o banner ocupar toda a largura da tela */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove o espaço extra ao redor da imagem */
+    object-fit: cover; /* Garante que a imagem preencha o espaço disponível */
+    margin: 20px auto; /* Centraliza o banner com margens */
+}
 
+
+.img-full img {
+    width: 100%; /* O banner ocupa 100% da largura */
+    height: 450px; /* Altura fixa */
+    object-fit: cover; /* Garante preenchimento sem distorção */
+    display: block; /* Remove espaços ao redor */
+}
+.slide_cre {
+    display: flex; 
+    justify-content: center; 
+    gap: 180px;
+    
+}
+
+.slide_cre h3 {
+    background-color: #555;
+    color: #ccc;
+    padding: 10px; 
+    text-align: center; 
+    border-radius: 10px;
+} 
 /* Cards */
 .card-container {
     display: flex;
@@ -203,4 +231,203 @@ main {
 
 .stars i.selected, .stars i:hover, .stars i:hover ~ i {
     color: #f0c514; /* Cor das estrelas selecionadas */
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+
+:root {
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+}
+
+.final {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    
+}
+
+main {
+    flex: 1; /* Expande o main para preencher o espaço */
+    width: 60%;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+footer {
+    width: 100%;
+    color: var(--color-neutral-40);
+    background-color: var(--color-neutral-10);
+    text-align: center;
+    padding: 2rem;
+}
+
+.footer-link {
+    text-decoration: none;
+}
+footer {
+    background-color:var(--color-neutral-10); /* Define o fundo preto para todo o rodapé */
+    color: #fff; /* Ajusta a cor do texto para branco para maior contraste */
+}
+#footer_content {
+    background-color: var(--color-neutral-10);
+    display: flex; /* Define um layout flexível */
+    flex-wrap: wrap; /* Permite quebrar linha quando necessário */
+    justify-content: space-between; /* Espaça os itens uniformemente */
+    align-items: flex-start; /* Alinha os itens pelo topo */
+    padding: 2rem; /* Reduz a altura do padding para ganhar espaço */
+    gap: 1.5rem; /* Espaçamento entre as seções */
+}
+
+#footer_contacts, 
+.footer-list, 
+#footer_subscribe {
+    flex: 1; /* Cada seção ocupa espaço proporcional */
+    min-width: 200px; /* Garante que caibam em uma linha */
+}
+
+#footer_social_media {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones */
+    gap: 1rem; /* Espaçamento entre os ícones */
+    margin-top: 1rem; /* Adiciona espaçamento superior */
+    width: 100%; /* Faz com que os ícones ocupem a linha inteira */
+}
+
+#footer_social_media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem; /* Ajusta o tamanho dos ícones */
+    width: 2rem; /* Ajusta o tamanho dos ícones */
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+
+
+#footer_contacts h1 {
+    margin-bottom: 0.75rem;
+}
+
+#footer_social_media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+#footer_social_media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer_social_media .footer-link i {
+    font-size: 1.25rem;
+}
+
+#footer_social_media .footer-link:hover {
+    opacity: 0.8;
+}
+
+#instagram {
+    background: linear-gradient(45deg, #7f37c9, #ff2992, #ff9807);
+}
+
+#facebook {
+    background-color: #4267b3;
+}
+
+#whatsapp {
+    background-color: #25d366;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.98rem;
+    list-style: none;
+}
+
+.footer-list .footer-link {
+    color: var(--color-neutral-30);
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+    color: #25d366;
+}
+
+#footer_subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#footer_subscribe p {
+    color: var(--color-neutral-30);
+}
+
+#input_group {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-neutral-0);
+    border-radius: 4px;
+}
+
+#input_group input {
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+#input_group button {
+    background-color: #7f37c9;
+    border: none;
+    color: var(--color-neutral-40);
+    padding: 0px 1.25rem;
+    font-size: 1.125rem;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#input_group button:hover {
+    opacity: 0.8;
+}
+
+#footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-neutral-0);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+    #footer_content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #footer_content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
 }
