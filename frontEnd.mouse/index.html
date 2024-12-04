@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="menus.css">
     <link rel="stylesheet" href="carrosel.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="main.js"></script>
 </head>
 <body>
     <!-- Cabeçalho de navegação -->
@@ -25,12 +26,14 @@
                         <i class="fas fa-search search-icon"></i>
                     </div>
                 </li>
-                <li class="telefone">
+                <li class="telefone-icone">
                     <i class="fas fa-phone"></i>
                 </li>
                 <li class="contato">
-                    <a href="link-desejado.html" class="bold-link">Fale conosco<br><strong>Clique aqui</strong></a>
+                    <span class="fale-conosco">Fale conosco<br><strong>Clique aqui</strong></span>
+                    <h1 class="telefone-numero">(62) 9 9426-2133</h1>
                 </li>
+                
                 <li class="contact-info">
                     <input type="text" class="contact-input" placeholder="Nome">
                     <input type="text" class="contact-input" placeholder="WhatsApp">
@@ -86,38 +89,229 @@
         </div>        
     </div>
 
-    <!-- Seções alternadas de informações -->
-    <div class="info-section">
-        <div class="info-container">
-            <div class="info-image">
-                <img src="whey index.png"  alt="Whey Protein">
-            </div>
-            <div class="info-text">
-                <h2>Whey Protein de Alta Qualidade</h2>
-                <p>Conquiste seus objetivos com proteínas premium que apoiam seu desempenho físico.</p>
-            </div>
+<!--Sobre a pagina -->
+    <div class="slide_cre">
+        <h3><i class="fas fa-truck"></i> FRETE GRATIS<br> consulte as condições</h3>
+        <h3><i class="fas fa-credit-card"></i> Parcele suas compras em até 3x sem juros</h3>
+        <h3><img src="8666421_pix_icon.png" alt="Pix"> 5% de Desconto para pagamento via pix </h3>
+        <h3><i class="fas fa-shield-alt"></i> Garantia de originalidade</h3>
+
+    </div>
+    <div class="texto_body">
+        <h3 class="texto_centro">Conheça nossos produtos que mudara seus resultados </h3>
+    </div>
+<!--PRODUTODS DA PAGINA PRINCIPAL-->
+    <div class="produtos_principais">
+        <div class="center_prod">
+            <a href="whey/whey.html">
+                <img src="Imagem_1.jpeg" alt="Musculação">
+            </a>
+            <h1>Massa muscular</h1>
         </div>
 
-        <div class="info-container reverse">
-            <div class="info-image">
-                <img src="creatina index.webp" alt="Creatina">
-            </div>
-            <div class="info-text">
-                <h2>Creatina para Força e Explosão</h2>
-                <p>Aumente sua força muscular com creatina de alta pureza e performance.</p>
-            </div>
+        <div class="center_prod">
+            <a href="Creatina/Creatina.html">
+                <img src="Imagem_3.jpeg" alt="Emagrecimento">
+            </a>
+            <h1>Emagrecimento</h1>
         </div>
 
-        <div class="info-container">
-            <div class="info-image">
-                <img src="pré treino.webp" alt="Pré-Treino">
-            </div>
-            <div class="info-text">
-                <h2>Pré-Treinos Potentes</h2>
-                <p>Energia e foco garantidos para superar qualquer treino!</p>
-            </div>
+        <div class="center_prod">
+            <a href="Pre-treino/Pre_treino.html">
+                <img src="Imagem_2.jpeg" alt="Energia">
+            </a>
+            <h1>Energia</h1>
         </div>
     </div>
+
+
+<!-- CARROSSEL COM OS BOTÕES -->
+    <div class="Carrosel_pro">
+        <div class="botao-container">
+            <button class="botao" onclick="toggleCarrosel('carrosel1')">Massa muscular</button>
+            <button class="botao" onclick="toggleCarrosel('carrosel2')">Emagrecimento</button>
+            
+        </div>
+
+        <div class="carrosel" id="carrosel1">
+            <div class="Imagem_center">
+                <div class="imagem-wrapper">
+                    <img class="Imagem_M" src="Imagem_1.jpeg" alt="Massa Muscular">
+                    <h1 class="texto-sobre-imagem">Massa muscular</h1>
+                </div>
+            </div>
+            
+            <div class="card-container">             
+                <div class="card">
+                    <img src="whey/Imagens_whey/whey_cokeis.webp" alt="Imagem do Produto">
+                    <h1>Whey Protein</h1>
+                    <h2>Sabor: Baunilha</h2>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                    </div>
+                    <span>R$105,00</span>
+                    <button>Click Aqui</button>
+                </div>
+
+                <div class="card">
+                    <img src="whey/Imagens_whey/Whey_growth_Chocolate.jpg" alt="Imagem do Produto">
+                    <h1>Whey Protein</h1>
+                    <h2>Sabor: Chocolate</h2>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                    </div>
+                    <span>R$105,00</span>
+                    <button>Click Aqui</button>
+                </div>
+
+                <div class="card">
+                    <img src="whey/Imagens_whey/Whey_growth_Sorvete_creme.jpg" alt="Imagem do Produto">
+                    <h1>Whey Protein</h1>
+                    <h2>Sabor: Sorvete</h2>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                    </div>
+                    <span>R$105,00</span>
+                    <button>Click Aqui</button>
+                </div>
+
+                <div class="card">
+                    <img src="whey/Imagens_whey/Whey_growth_mousse_maracuja.webp" alt="Imagem do Produto">
+                    <h1>Whey Protein</h1>
+                    <h2>Sabor: Maracuja</h2>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                    </div>
+                    <span>R$105,00</span>
+                    <button>Click Aqui</button>
+                </div>
+
+                <div class="card">
+                    <img src="whey/Imagens_whey/Whey_growth_natural.jpg" alt="Imagem do Produto">
+                    <h1>Whey Protein</h1>
+                    <h2>Sabor: Natural</h2>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                    </div>
+                    <span>R$105,00</span>
+                    <button>Click Aqui</button>
+                </div>
+                <!-- Outros produtos... -->
+            </div>
+        </div>
+<!--PRODUTO 2-->
+        <div class="carrosel" id="carrosel2">
+            <div class="Imagem_center">
+                <div class="imagem-wrapper">
+                    <img class="Imagem_M" src="Imagem_3.jpeg" alt="Massa Muscular">
+                    <h1 class="texto-sobre-imagem">Emagrecimento</h1>
+                </div>
+            </div>
+            
+            <div class="card-container">             
+                <div class="card">
+                    <img src="Creatina/imagem_creatina/Creatina_growth_mono250.jpg" alt="Imagem do Produto">
+                    <h1>Creatian Growth</h1>
+                    <h2>Monohidratada</h2>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                    </div>
+                    <span>R$105,00</span>
+                    <button>Click Aqui</button>
+                </div>
+
+                <div class="card">
+                    <img src="Creatina/imagem_creatina/Creatina_maxTinaniuam_100g.webp" alt="Imagem do Produto">
+                    <h1>Creatina Max </h1>
+                    <h2>Monohidratada</h2>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                    </div>
+                    <span>R$105,00</span>
+                    <button>Click Aqui</button>
+                </div>
+
+                <div class="card">
+                    <img src="Creatina/imagem_creatina/creatine-max-titanium-300g-1.webp" alt="Imagem do Produto">
+                    <h1>Creatina Max</h1>
+                    <h2>Monohidratada 300g</h2>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                    </div>
+                    <span>R$105,00</span>
+                    <button>Click Aqui</button>
+                </div>
+
+                <div class="card">
+                    <img src="Creatina/imagem_creatina/Creatina_integralmed_150.webp" alt="Imagem do Produto">
+                    <h1>Creatina </h1>
+                    <h2>Monohidratada Integral Medica</h2>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                    </div>
+                    <span>R$105,00</span>
+                    <button>Click Aqui</button>
+                </div>
+
+                <div class="card">
+                    <img src="Creatina/imagem_creatina/creatina-ramon-dino-250g-Max_titanium.webp" alt="Imagem do Produto">
+                    <h1>Creatina</h1>
+                    <h2>Ramon Dino Max</h2>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                    </div>
+                    <span>R$105,00</span>
+                    <button>Click Aqui</button>
+                </div>
+
+        <div class="carrosel" id="carrosel3">
+            <img src="imagem7.jpg" alt="Carrossel Energia">
+            <img src="imagem8.jpg" alt="Carrossel Energia">
+            <img src="imagem9.jpg" alt="Carrossel Energia">
+        </div>
+    </div>
+
+
 
     <!-- Rodapé -->
     <div class="final">
